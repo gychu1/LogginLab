@@ -4,7 +4,7 @@ import java.util.logging.Logger;
 public class LogginLab {
     private final static Logger logger = Logger.getLogger(LogginLab.class.getName());
 
-    private Integer threshold = 0;
+    private Integer threshold;
 
     public LogginLab() {
         this.threshold = 0;
@@ -30,6 +30,10 @@ public class LogginLab {
 
     public boolean thresholdExceeds(Integer limit) {
         return (this.threshold > limit);
+    }
+
+    public boolean thresholdReached(Integer limit) {
+        return limit > this.threshold;
     }
 
     // Write a method called thresholdReached, returns true if argument 'limit' is over the threshold.
